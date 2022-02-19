@@ -12,7 +12,7 @@ bot = Client(
 app = Client(
     api_id=API_ID,
     api_hash=API_HASH,
-    session_name=STRING1,
+    session_name=SESSION_NAME,
     plugins=dict(root="Script.Plugins"),
     )
 
