@@ -1,6 +1,6 @@
 from pyrogram import Client
 from Script.Config import API_ID, API_HASH, BOT_TOKEN, SESSION_NAME
-
+from pytgcalls import PyTgCalls, idle
 
 bot = Client(
     "Indian Music Bot",
