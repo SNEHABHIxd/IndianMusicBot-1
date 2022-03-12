@@ -14,5 +14,5 @@ from git.exc import GitCommandError, InvalidGitRepositoryError
 loop = asyncio.get_event_loop()
 vps = Console()
 
-UPDATE_BRANCH = "main"
+UPDATE_BRANCH = "master"
 UPDATE_REPO = "https://github.com/TG-TeamIndia/IndianMusicBot"
