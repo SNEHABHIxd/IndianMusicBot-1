@@ -1,7 +1,6 @@
 pyrogram
 tgcrypto
 py-tgcalls
-youtube_search
 pytube
 yt_dlp
 youtube_dl
@@ -10,3 +9,5 @@ rich
 aiohttp
 gitpython
 motor
+youtube_search
+
