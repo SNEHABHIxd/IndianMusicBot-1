@@ -2,8 +2,8 @@ from Script.assistant.TgCalls.Clients import bot, user
 from pyrogram import filters
 from Script.Cache.admin_check import *
 import asyncio
-from Script.Plugin.PyTgCalls import skip_current_song, skip_item
-from Script.Plugin.queues import QUEUE 
+from Script.Plugin.Helpers.PyTgCalls import skip_current_song, skip_item
+from Script.Plugin.Helpers.queues import QUEUE 
 
 
 @bot.on_message(filters.command("skip") & filters.group)
