@@ -1,0 +1,30 @@
+{
+  "name": "Indian Music Bot",
+  "description": "Bot to play songs in Telegram group voice chats. Powered by t.me/IndianSupportGroup.",
+  "keywords": ["music", "voicechat", "telegram"],
+  "logo": "https://telegra.ph/file/4c03ff6d25fc678a2fe08.jpg",
+  "repository": "https://github.com/TG-TeamIndia/IndianMusicBot",
+  "stack": "container",
+  "env": {
+    "SESSION_NAME": {
+      "description": "Pyrogram session string",
+      "required": true
+    },
+    "BOT_TOKEN": {
+      "description": "A bot token from @BotFather",
+      "required": true
+    },
+    "API_ID": {
+      "description": "API_ID from my.telegram.org/apps",
+      "required": true
+    },
+    "API_HASH": {
+      "description": "API_HASH from my.telegram.org/apps",
+      "required": true
+    },
+    "OWNER_ID": {
+      "description": "Your Telegram ID",
+      "required": true
+    }
+  }
+}
