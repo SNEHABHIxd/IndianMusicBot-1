@@ -8,3 +8,4 @@ SESSION_NAME = getenv("SESSION_NAME", "session")
 BOT_TOKEN = getenv("BOT_TOKEN")
 OWNER_ID = int(os.environ.get("OWNER_ID"))
 
+#soon adding new plugins
