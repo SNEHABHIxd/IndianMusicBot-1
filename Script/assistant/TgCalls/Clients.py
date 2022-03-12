@@ -9,12 +9,12 @@ bot = Client(
     bot_token=BOT_TOKEN,
     )
 
-app = Client(
+abhi = Client(
     api_id=API_ID,
     api_hash=API_HASH,
     session_name=SESSION_NAME,
     plugins=dict(root="Script.Plugin"),
     )
 
-user = PyTgCalls(app)
+user = PyTgCalls(abhi)
 
