@@ -14,7 +14,7 @@ async def mute(_, message):
     chat_id = message.chat.id
     if chat_id in QUEUE:
         try:
-            await app.mute_stream(chat_id)
+            await user.mute_stream(chat_id)
             await message.reply_text("🔇 Muted streaming.")
         except:
             await message.reply_text("❗Nothing is playing.")
