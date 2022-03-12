@@ -1,8 +1,8 @@
-from Script.Plugin.queues import QUEUE, clear_queue
+from Script.Plugin.Helpers.queues import QUEUE, clear_queue
 import asyncio
 from Script.assistant.TgCalls.Clients import bot, user
 from pyrogram import filters
-from Script.Plugin.PyTgCalls import 
+from Script.Plugin.Helpers.PyTgCalls import 
 
 from Script.Cache.admin_check import *
 
