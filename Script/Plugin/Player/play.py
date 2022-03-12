@@ -41,7 +41,7 @@ async def play(_, message):
     if chat_id in LIVE_CHATS:
         return await message.reply_text("❗️Please send <code>/stop</code> to end current live streaming before play songs or videos.")
     
-    m = await message.reply_text("🔄 Processing...")
+    m = await message.reply_text("💫")
     if state == "play":
         damn = AudioPiped
         ded = yt_audio
