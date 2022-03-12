@@ -13,7 +13,7 @@ app = Client(
     api_id=API_ID,
     api_hash=API_HASH,
     session_name=SESSION_NAME,
-    plugins=dict(root="Script.Plugins"),
+    plugins=dict(root="Script.Plugin"),
     )
 
 user = PyTgCalls(app)
