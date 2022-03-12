@@ -19,10 +19,10 @@ from pytgcalls.types.input_stream.quality import (
 from pytgcalls.types.stream import StreamAudioEnded, StreamVideoEnded
 from pyrogram import filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, CallbackQuery
-from Script.Plugin.queues import QUEUE, add_to_queue, get_queue, clear_queue, pop_an_item
+from Script.Plugin.Helpers.queues import QUEUE, add_to_queue, get_queue, clear_queue, pop_an_item
 from Script.Cache.admin_check import *
 from Script.assistant.TgCalls.Clients import bot, user
-from Script.Plugin.inline import BUTTONS
+from Script.Plugin.Helpers.inline import BUTTONS
 from Script.Cache.YouTubeDL import yt_audio, yt_video
 
 
