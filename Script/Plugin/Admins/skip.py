@@ -2,7 +2,7 @@ from Script.assistant.TgCalls.Clients import bot, user
 
 from Script.Cache.admin_check import *
 
-from Script.Plugin.PyTgCalls import skip_current_song
+from Script.Plugin.PyTgCalls import skip_current_song, skip_item
 from Script.Plugin.queues import QUEUE 
 
 
