@@ -12,6 +12,7 @@ from Script.assistant.TgCalls.Clients import bot, user
 
 LIVE_CHATS = []
 
+
 @bot.on_message(filters.command(["stream", "vstream"]) & filters.group)
 @is_admin
 async def stream_func(_, message):
