@@ -14,7 +14,7 @@ async def resume(_, message):
     chat_id = message.chat.id
     if chat_id in QUEUE:
         try:
-            await app.resume_stream(chat_id)
+            await user.resume_stream(chat_id)
             await message.reply_text("⏸ Resumed streaming.")
         except:
             await message.reply_text("❗Nothing is playing.")
