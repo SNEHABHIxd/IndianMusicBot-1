@@ -27,6 +27,7 @@ def pop_an_item(chat_id):
         return 0
 
 
+
 def clear_queue(chat_id):
     if chat_id in QUEUE:
         QUEUE.pop(chat_id)
