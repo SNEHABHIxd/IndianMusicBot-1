@@ -26,7 +26,7 @@ from Script.Plugin.inline import BUTTONS
 from Script.Cache.YouTubeDL import yt_audio, yt_video
 
 
-
+LIVE_CHATS = []
 
 @bot.on_message(filters.command(["play", "vplay"]) & filters.group)
 async def play(_, message):
