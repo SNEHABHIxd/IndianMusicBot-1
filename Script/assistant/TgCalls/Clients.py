@@ -18,6 +18,3 @@ app = Client(
 
 user = PyTgCalls(app)
 
-user.start()
-bot.run()
-idle()
