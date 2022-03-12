@@ -6,6 +6,7 @@ from Script.Plugin.Helpers.PyTgCalls import skip_current_song, skip_item
 from Script.Plugin.Helpers.queues import QUEUE 
 
 
+
 @bot.on_message(filters.command("skip") & filters.group)
 @is_admin
 async def skip(_, message):
