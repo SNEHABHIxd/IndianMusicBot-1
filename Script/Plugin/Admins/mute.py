@@ -7,6 +7,7 @@ from Script.Cache.admin_check import *
 from Script.Plugin.Helpers.queues import QUEUE
 
 
+
 @bot.on_message(filters.command("mute") & filters.group)
 @is_admin
 async def mute(_, message):
