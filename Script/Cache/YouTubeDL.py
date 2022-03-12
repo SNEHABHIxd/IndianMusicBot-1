@@ -24,7 +24,7 @@ async def yt_audio(link):
         "yt-dlp",
         "-g",
         "-f",
-        "bestaudio",
+        "best[height<=?720][width<=?1280]",
         f"{link}",
         stdout=asyncio.subprocess.PIPE,
         stderr=asyncio.subprocess.PIPE,
