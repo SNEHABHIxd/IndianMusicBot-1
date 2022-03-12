@@ -5,3 +5,8 @@ youtube_search
 pytube
 yt_dlp
 youtube_dl
+heroku3
+rich
+aiohttp
+gitpython
+motor
