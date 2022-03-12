@@ -8,6 +8,7 @@ from pytgcalls.types.input_stream.quality import (
     LowQualityVideo,
     MediumQualityVideo
 )
+
 from pytgcalls.types import Update
 from pytgcalls.types.stream import StreamAudioEnded, StreamVideoEnded
 from pyrogram.raw.base import Update
