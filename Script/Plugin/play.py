@@ -23,9 +23,10 @@ from Script.Plugin.queues import QUEUE, add_to_queue, get_queue, clear_queue, po
 from Script.Cache.admin_check import *
 from Script.assistant.TgCalls.Clients import bot, user
 from Script.Plugin.inline import BUTTONS
+from Script.Cache.YouTubeDL import yt_audio, yt_video
 
 
-LIVE_CHATS = []
+
 
 @bot.on_message(filters.command(["play", "vplay"]) & filters.group)
 async def play(_, message):
