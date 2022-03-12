@@ -1,5 +1,6 @@
 import functools
 
+
 def is_admin(func):
     @functools.wraps(func)
     async def oops(client,message):
