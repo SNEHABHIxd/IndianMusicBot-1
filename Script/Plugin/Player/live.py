@@ -51,3 +51,5 @@ async def stream_func(_, message):
             LIVE_CHATS.append(chat_id)
     except Exception as e:
         return await m.edit(str(e))
+
+    
