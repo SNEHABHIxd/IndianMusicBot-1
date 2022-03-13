@@ -10,6 +10,8 @@ from Script.Cache.admin_check import *
 
 from Script.assistant.TgCalls.Clients import bot, user
 
+from Script.Plugin.Helpers.queues import QUEUE
+
 LIVE_CHATS = []
 
 
