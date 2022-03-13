@@ -6,7 +6,7 @@ from Script.assistant.TgCalls.Clients import bot, user
 
 from pyrogram import filters
 
-from Script.Plugin.Helpers.PyTgCalls import 
+
 
 from Script.Cache.admin_check import *
 
