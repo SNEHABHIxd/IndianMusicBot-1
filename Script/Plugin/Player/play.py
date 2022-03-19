@@ -23,7 +23,6 @@ from pyrogram.types import Message
 from Script.Plugin.Helpers.queues import QUEUE, add_to_queue, get_queue, clear_queue, pop_an_item
 from Script.Cache.admin_check import *
 from Script.assistant.TgCalls.Clients import bot, user
-from Script.Plugin.Helpers.inline import BUTTONS
 from Script.Cache.YouTubeDL import yt_audio, yt_video
 from Script.assistant.Keyboard.Connect import me_abhi
 
@@ -141,7 +140,7 @@ async def play(c: Client, message: Message):
                 stream_type=StreamType().pulse_stream
             )
             add_to_queue(chat_id, yt.title, duration, link, playlink, doom, Q, thumb)
-            await message.reply_photo(thumb, caption=cap, reply_markup=BUTTONS)
+            await message.reply_photo(thumb, caption=cap)
             await m.delete()
     except Exception as e:
         return await m.edit(str(e))
