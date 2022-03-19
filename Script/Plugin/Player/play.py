@@ -17,27 +17,75 @@ from pytgcalls.types.input_stream.quality import (
     MediumQualityVideo
 )
 from pytgcalls.types.stream import StreamAudioEnded, StreamVideoEnded
-from pyrogram import filters
-from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, CallbackQuery
+from pyrogram import filters, Client
+from pyrogram.errors import UserAlreadyParticipant, UserNotParticipant
+from pyrogram.types import Message
 from Script.Plugin.Helpers.queues import QUEUE, add_to_queue, get_queue, clear_queue, pop_an_item
 from Script.Cache.admin_check import *
 from Script.assistant.TgCalls.Clients import bot, user
 from Script.Plugin.Helpers.inline import BUTTONS
 from Script.Cache.YouTubeDL import yt_audio, yt_video
+from Script.assistant.Keyboard.Connect import me_abhi
 
-
+    
 LIVE_CHATS = []
 
 @bot.on_message(filters.command(["play", "vplay"]) & filters.group)
-async def play(_, message):
+async def play(c: Client, message: Message):
     await message.delete()
     user_id = message.from_user.id
+    
     state = message.command[0].lower()
     try:
         query = message.text.split(None, 1)[1]
     except:
         return await message.reply_text(f"<b>Usage:</b> <code>/{state} [query]</code>")
+    replied = message.reply_to_message
     chat_id = message.chat.id
+    
+    if message.sender_chat:
+        return await message.reply_text(
+            "you're an __Anonymous__ user !\n\n» revert back to your real user account to use this bot."
+        )
+    try:
+        ubot = me_abhi.id
+        blaze = await c.get_chat_member(chat_id, ubot)
+        if blaze.status == "banned":
+            try:
+                await message.reply_text("❌ The userbot is banned in this chat, unban the userbot first to be able to play music !")
+                await remove_active_chat(chat_id)
+            except BaseException:
+                pass
+            invitelink = (await c.get_chat(chat_id)).invite_link
+            if not invitelink:
+                await c.export_chat_invite_link(chat_id)
+                invitelink = (await c.get_chat(chat_id)).invite_link
+            if invitelink.startswith("https://t.me/+"):
+                invitelink = invitelink.replace(
+                    "https://t.me/+", "https://t.me/joinchat/"
+                )
+            await abhi.join_chat(invitelink)
+            await remove_active_chat(chat_id)
+    except UserNotParticipant:
+        try:
+            invitelink = (await c.get_chat(chat_id)).invite_link
+            if not invitelink:
+                await c.export_chat_invite_link(chat_id)
+                invitelink = (await c.get_chat(chat_id)).invite_link
+            if invitelink.startswith("https://t.me/+"):
+                invitelink = invitelink.replace(
+                    "https://t.me/+", "https://t.me/joinchat/"
+                )
+            await abhi.join_chat(invitelink)
+            await remove_active_chat(chat_id)
+        except UserAlreadyParticipant:
+            pass
+        except Exception as e:
+            LOGS.info(e)
+            return await message.reply_text(
+                f"❌ **userbot failed to join**\n\n**reason**: `{e}`"
+            )
+        
     if chat_id in LIVE_CHATS:
         return await message.reply_text("❗️Please send <code>/stop</code> to end current live streaming before play songs or videos.")
     
