@@ -1,7 +1,8 @@
 from pyrogram import Client, filters
+from pyrogram.types import Message
 from .Helpers.check_heroku import check_heroku
 import heroku3
-
+from Script.Config import OWNER_ID
 
 @Client.on_message(command("setvar") & filters.user(OWNER_ID))
 @_check_heroku
