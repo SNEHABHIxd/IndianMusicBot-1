@@ -11,7 +11,11 @@ from Script.Config import (
     HEROKU_APP_NAME,
 )
 
-
+heroku_client = None
+if HEROKU_API_KEY:
+    heroku_client = heroku3.from_key(HEROKU_API_KEY)
+    
+    
 def _check_heroku(func):
     @wraps(func)
     async def heroku_cli(client, message):
