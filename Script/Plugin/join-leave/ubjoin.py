@@ -3,7 +3,7 @@ from pyrogram import Client, filters
 from pyrogram.errors import UserAlreadyParticipant
 from Script.assistant.TgCalls.Clients import abhi
 from Script.Config import OWNER_ID
-
+from Script.Cache.admin_check import *
 
 
 @Client.on_message(command(["userbotjoin", "ubjoin"]) & ~filters.private & ~filters.bot & filters.user(OWNER_ID)
