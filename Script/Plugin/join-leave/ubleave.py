@@ -3,6 +3,7 @@ from pyrogram.types import Message
 from Script.assistant.TgCalls.Clients import abhi
 from Script.Cache.admin_check import *
 import asyncio
+from Script.Config import OWNER_ID
 
 
 @Client.on_message(command(["userbotleave", "ubleave"]) & filters.group & ~filters.edited & filters.user(OWNER_ID))
