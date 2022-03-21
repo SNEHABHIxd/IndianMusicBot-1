@@ -10,5 +10,6 @@ aiohttp
 gitpython
 motor
 youtube_search
-
+aiofiles
 dnspython
+python-dotenv
