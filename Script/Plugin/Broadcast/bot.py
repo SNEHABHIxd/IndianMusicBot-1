@@ -21,7 +21,7 @@ async def bbroadcast(_, m: Message):
 
 async def bot_broadcast(m, db):
     all_users = await db.get_all_users()
-    broadcast_msg = m.reply_to_messasyncage
+    broadcast_msg = m.reply_to_message
     while True:
         broadcast_id = "".join(random.choice(string.ascii_letters) for i in range(3))
         if not broadcast_ids.get(broadcast_id):
