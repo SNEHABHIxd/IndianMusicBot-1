@@ -2,7 +2,7 @@ from pyrogram import Client, filters
 from pyrogram.types import Message
 
 from Script.assistant.TgCalls.Clients import bot
-from Script.Plugin.Helpers.get_file_id import get_file_id
+from Script.Plugin.Helpers.ExtCmd import get_file_id
 
 
 @bot.on_message(filters.command(["id"]) & filters.group)
