@@ -22,9 +22,9 @@ from pyrogram.errors import UserAlreadyParticipant, UserNotParticipant
 from pyrogram.types import Message
 from Script.Plugin.Helpers.Player import QUEUE, add_to_queue, get_queue, clear_queue, pop_an_item
 from Script.Cache.admin_check import *
-from Script.assistant.TgCalls.Clients import bot, user, abhi
+from Script.assistant.TgCalls.Clients import *
 from Script.Cache.YouTubeDL import yt_audio, yt_video
-from Script.assistant.TgCalls.Clients import me_abhi
+
 
     
 LIVE_CHATS = []
