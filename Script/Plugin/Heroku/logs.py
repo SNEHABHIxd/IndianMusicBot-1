@@ -1,10 +1,10 @@
 from pyrogram import Client, filters
-from .Helpers.check_heroku import check_heroku
+from Script.Plugin.Helpers.Heroku import check_heroku
 from Script.Config import (
     OWNER_ID,
     HEROKU_APP_NAME,
 )
-from .Helpers.send_files import edit_or_send_as_file
+from Script.Plugin.Helpers.Heroku import edit_or_send_as_file
 
 
 
