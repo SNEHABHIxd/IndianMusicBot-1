@@ -6,6 +6,8 @@ from pyrogram.errors import (
     PeerIdInvalid,
     UserIsBlocked,
 )
+import traceback
+
 
 BROADCAST = bool(os.environ.get("BROADCAST_AS_COPY", ""))
 
