@@ -8,15 +8,15 @@ from pyrogram.errors import (
 )
 import traceback
 
-BROADCAST = bool(os.environ.get("BROADCAST", "False"))
+IS_BROADCAST = bool(os.environ.get("IS_BROADCAST", "False"))
 
 # IF YOU FILL BROADCAST VALUE TRUE THEN YOUR BOT COPY MSG AND SEND TO ALL GROUPS
 #IF YOU FILL BROADCAST VALUE FALSE THEN YOUR BOT FORWARD MSG TO ALL GROUPS
 async def send_msg(user_id, message):
     try:
-        if BROADCAST is False:
+        if IS_BROADCAST is False:
             await message.forward(chat_id=user_id)
-        elif BROADCAST is True:
+        elif IS_BROADCAST is True:
             await message.copy(chat_id=user_id)
         return 200, None
     except FloodWait as e:
