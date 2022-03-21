@@ -2,7 +2,7 @@ import asyncio
 from pyrogram import Client, filters
 from pyrogram.types import Dialog, Chat, Message
 from pyrogram.errors import UserAlreadyParticipant
-from Script import abhi
+from Script.assistant.TgCalls.Clients import abhi
 from Script.Config import OWNER_ID
 
 @Client.on_message(filters.command(["assbroadcast"]) & filters.user(OWNER_ID))
@@ -17,7 +17,7 @@ async def broadcast(_, message: Message):
             await wtf.edit("**__Ƥɭɘɑsɘ Ʀɘƥɭy Ƭø ɑ Mɘssɑʛɘ Ƭø Stɑɤt Ɓɤøɑɗƈɑst ...__**")
             return
         lmao = message.reply_to_message.text
-        async for dialog in aditya.iter_dialogs():
+        async for dialog in abhi.iter_dialogs():
             try:
                 await abhi.send_message(dialog.chat.id, lmao)
                 sent = sent+1
