@@ -21,5 +21,5 @@ user = PyTgCalls(abhi)
 
 with Client(":veez:", API_ID, API_HASH, bot_token=BOT_TOKEN) as app:
     indian = app.get_me()
-with abhi as app:
+with user as app:
     me_abhi = app.get_me()
