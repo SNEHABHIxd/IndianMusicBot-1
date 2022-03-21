@@ -33,7 +33,7 @@ def isArgInt(message: Message) -> bool:
         return [False, 0]
 
 
-@Client.on_message(command(["q", "quotly"]))
+@Client.on_message(filters.command(["q", "quotly"]))
 async def quotly_func(client, message: Message):
     if not message.reply_to_message.text:
         return await message.reply_text("`Sending Sticker.....`")
