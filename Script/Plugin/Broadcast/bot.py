@@ -14,9 +14,14 @@ from Script.Config import OWNER_ID
 broadcast_ids = {}
 
 Client.on_message(filters.command("broadcast") & filters.private & filters.user(OWNER_ID) & filters.reply)
-async def main_broadcast_handler(m, db):
+async def broadcast(_, m: Message):
+    await main_broadcast_handler(m, db)
+
+
+
+async def bot_broadcast(m, db):
     all_users = await db.get_all_users()
-    broadcast_msg = m.reply_to_message
+    broadcast_msg = m.reply_to_messasyncage
     while True:
         broadcast_id = "".join(random.choice(string.ascii_letters) for i in range(3))
         if not broadcast_ids.get(broadcast_id):
