@@ -1,4 +1,4 @@
-from Script.Plugin.Helpers.queues import QUEUE, clear_queue
+from Script.Plugin.Helpers.Player import QUEUE, clear_queue
 
 import asyncio
 
