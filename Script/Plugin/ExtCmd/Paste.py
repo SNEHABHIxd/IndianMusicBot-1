@@ -3,7 +3,7 @@ import asyncio
 import re
 from pykeyboard import InlineKeyboard
 from pyrogram.types import InlineKeyboardButton, Message
-from Script.Plugin.Helpers.Paste import paste
+from Script.Plugin.Helpers.ExtCmd import paste
 from pyrogram import Client, filters
 import aiohttp
 import aiohttp_session as session
