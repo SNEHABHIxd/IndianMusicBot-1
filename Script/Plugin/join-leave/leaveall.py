@@ -4,7 +4,7 @@ from Script.Config import OWNER_ID
 from Script.assistant.TgCalls.Clients import abhi
 
 
-@Client.on_message(command(["userbotleaveall" "leaveall"]) & filters.user(OWNER_ID)
+@Client.on_message(filters.command(["userbotleaveall", "leaveall"]) & filters.user(OWNER_ID))
 async def leaveall(client, message):
     if message.from_user.id not in OWNER_ID:
         return
