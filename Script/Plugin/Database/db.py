@@ -75,4 +75,4 @@ class Database:
 
 
 # Database
-db = Database(MONGODB_URL)
+db = Database(MONGODB_URL, INDIAN_BOT)
