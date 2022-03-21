@@ -1,8 +1,8 @@
 import os
-from pyrogram import Client
+from pyrogram import Client, filters
 from telegraph import upload_file
 
-@Client.on_message(command(["telegraph", "tm", "tgm"]))
+@Client.on_message(filters.command(["telegraph", "tm", "tgm"]))
 async def telegraph(client, message):
     replied = message.reply_to_message
     if not replied:
