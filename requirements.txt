@@ -16,3 +16,4 @@ python-dotenv
 pykeyboard
 aiohttp_session
 telegraph
+python-arq
