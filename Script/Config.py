@@ -11,3 +11,4 @@ OWNER_ID = list(map(int, getenv("OWNER_ID").split()))
 #soon adding new plugins
 HEROKU_APP_NAME = os.environ.get("HEROKU_APP_NAME", None)
 HEROKU_API_KEY = os.environ.get("HEROKU_API_KEY", None)
+MONGODB_URL = os.environ.get("MONGODB_URL", None)
