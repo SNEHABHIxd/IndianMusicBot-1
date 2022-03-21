@@ -1,6 +1,6 @@
 from pyrogram import Client, filters
 from pyrogram.types import Message
-from .Helpers.check_heroku import check_heroku
+from Script.Plugin.Helpers.Heroku import check_heroku
 import heroku3
 from Script.Config import OWNER_ID
 
