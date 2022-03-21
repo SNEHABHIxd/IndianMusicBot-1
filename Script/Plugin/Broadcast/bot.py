@@ -9,7 +9,7 @@ import random
 import aiofiles
 from pyrogram import Client, filters
 from pyrogram.types import Message
-
+from Script.Config import OWNER_ID
 
 broadcast_ids = {}
 
