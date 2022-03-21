@@ -77,7 +77,8 @@ async def play(c: Client, message: Message):
                 )
             await abhi.join_chat(invitelink)
             await remove_active_chat(chat_id)
-        
+        except UserAlreadyParticipant:
+            pass
         
     if chat_id in LIVE_CHATS:
         return await message.reply_text("❗️Please send <code>/stop</code> to end current live streaming before play songs or videos.")
