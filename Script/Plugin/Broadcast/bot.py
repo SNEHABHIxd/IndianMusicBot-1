@@ -15,7 +15,7 @@ broadcast_ids = {}
 
 Client.on_message(filters.command("broadcast") & filters.private & filters.user(OWNER_ID) & filters.reply)
 async def broadcast(_, m: Message):
-    await main_broadcast_handler(m, db)
+    await bot_broadcast(m, db)
 
 
 
