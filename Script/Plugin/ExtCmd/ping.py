@@ -1,8 +1,7 @@
 import os
 import sys
 import asyncio
-from pyrogram import Client
-from pyrogram import filters
+from pyrogram import Client, filters
 from pyrogram.types import Message
 from Script.assistant.TgCalls.Clients import bot
 from time import time
