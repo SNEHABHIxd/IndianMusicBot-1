@@ -6,7 +6,7 @@ import asyncio
 from Script.Config import OWNER_ID
 
 
-@Client.on_message(command(["userbotleave", "ubleave"]) & filters.group & ~filters.edited & filters.user(OWNER_ID))
+@Client.on_message(filters.command(["userbotleave", "ubleave"]) & filters.group & ~filters.edited & filters.user(OWNER_ID))
 @is_admin
 async def rem(client, message):
     try:
