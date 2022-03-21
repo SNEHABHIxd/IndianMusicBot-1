@@ -4,7 +4,7 @@ import asyncio
 
 from Script.Cache.admin_check import *
 
-from Script.Plugin.Helpers.queues import QUEUE
+from Script.Plugin.Helpers.Player import QUEUE
 
 
 
