@@ -14,4 +14,4 @@ HEROKU_API_KEY = os.environ.get("HEROKU_API_KEY", None)
 MONGODB_URL = os.environ.get("MONGODB_URL", None)
 INDIAN_BOT = getenv("INDIAN_BOT", "")
 LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL"))
-BROADCAST = bool(os.environ.get("BROADCAST", "False"))
+
