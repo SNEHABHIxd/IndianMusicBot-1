@@ -14,7 +14,7 @@ from Script.Config import OWNER_ID
 broadcast_ids = {}
 
 Client.on_message(filters.command("broadcast") & filters.private & filters.user(OWNER_ID) & filters.reply)
-async def broadcast(_, m: Message):
+async def bbroadcast(_, m: Message):
     await bot_broadcast(m, db)
 
 
