@@ -7,8 +7,8 @@ from pyrogram.errors import (
     UserIsBlocked,
 )
 import traceback
-from Script.Config import BROADCAST
 
+BROADCAST = bool(os.environ.get("BROADCAST", "False"))
 
 # IF YOU FILL BROADCAST VALUE TRUE THEN YOUR BOT COPY MSG AND SEND TO ALL GROUPS
 #IF YOU FILL BROADCAST VALUE FALSE THEN YOUR BOT FORWARD MSG TO ALL GROUPS
