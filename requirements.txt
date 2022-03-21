@@ -13,3 +13,4 @@ youtube_search
 aiofiles
 dnspython
 python-dotenv
+pykeyboard
