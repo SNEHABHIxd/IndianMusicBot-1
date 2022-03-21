@@ -1,6 +1,6 @@
 import asyncio
 from Script.assistant.TgCalls.Clients import bot, user
-from Script.Plugin.Helpers.queues import QUEUE, add_to_queue, get_queue, clear_queue, pop_an_item
+from Script.Plugin.Helpers.Player import QUEUE, add_to_queue, get_queue, clear_queue, pop_an_item
 from pytgcalls.types.input_stream import AudioPiped, AudioVideoPiped
 from pytgcalls.types.input_stream.quality import (
     HighQualityAudio,
