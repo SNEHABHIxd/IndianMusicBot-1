@@ -77,13 +77,7 @@ async def play(c: Client, message: Message):
                 )
             await abhi.join_chat(invitelink)
             await remove_active_chat(chat_id)
-        except UserAlreadyParticipant:
-            pass
-        except Exception as e:
-            LOGS.info(e)
-            return await message.reply_text(
-                f"❌ **userbot failed to join**\n\n**reason**: `{e}`"
-            )
+        
         
     if chat_id in LIVE_CHATS:
         return await message.reply_text("❗️Please send <code>/stop</code> to end current live streaming before play songs or videos.")
