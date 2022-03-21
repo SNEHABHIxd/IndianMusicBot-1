@@ -1,10 +1,10 @@
 from pyrogram import Client, filters
 from pyrogram.types import Message
-from Script.Plugin.Helpers.Heroku import check_heroku
+from Script.Plugin.Helpers.Heroku import _check_heroku
 import heroku3
 from Script.Config import OWNER_ID
 
-@Client.on_message(command("setvar") & filters.user(OWNER_ID))
+@Client.on_message(filters.command("setvar") & filters.user(OWNER_ID))
 @_check_heroku
 async def delvar(client: Client, message: Message, app_):
     msg = await message.reply_text("`please wait...!`")
