@@ -7,11 +7,13 @@ import time
 import datetime
 import random
 import aiofiles
+from pyrogram import Client, filters
+from pyrogram.types import Message
 
 
 broadcast_ids = {}
 
-
+Client.on_message(filters.command("broadcast") & filters.private & filters.user(OWNER_ID) & filters.reply)
 async def main_broadcast_handler(m, db):
     all_users = await db.get_all_users()
     broadcast_msg = m.reply_to_message
