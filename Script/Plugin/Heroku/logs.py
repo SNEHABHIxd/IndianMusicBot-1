@@ -1,5 +1,5 @@
 from pyrogram import Client, filters
-from Script.Plugin.Helpers.Heroku import check_heroku
+from Script.Plugin.Helpers.Heroku import _check_heroku
 from Script.Config import (
     OWNER_ID,
     HEROKU_APP_NAME,
