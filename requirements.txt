@@ -11,3 +11,4 @@ gitpython
 motor
 youtube_search
 
+dnspython
