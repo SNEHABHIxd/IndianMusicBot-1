@@ -14,3 +14,4 @@ aiofiles
 dnspython
 python-dotenv
 pykeyboard
+aiohttp_session
