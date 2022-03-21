@@ -5,7 +5,7 @@ from Script.Config import (
     HEROKU_APP_NAME,
 )
 from Script.Plugin.Helpers.Heroku import edit_or_send_as_file
-
+from pyrogram.types import Message
 
 
 @Client.on_message(filters.command(["logs"]) & filters.user(OWNER_ID))
