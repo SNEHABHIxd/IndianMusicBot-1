@@ -5,7 +5,7 @@ from pyrogram.errors import UserAlreadyParticipant
 from Script.assistant.TgCalls.Clients import bot
 from Script.Config import OWNER_ID
 
-@Client.on_message(filters.command(["assbroadcast"]) & filters.user(OWNER_ID))
+@Client.on_message(filters.command(["broadcast"]) & filters.user(OWNER_ID))
 async def broadcast(_, message: Message):
     sent=0
     failed=0
