@@ -1,8 +1,8 @@
 pyrogram
 tgcrypto
-py-tgcalls[pyrogram]
+git+https://github.com/vexeraop/xdcalls
 pytube
-yt_dlp
+git+https://GitHub.com/vexeraop/download
 youtube_dl
 heroku3
 rich
