@@ -1,4 +1,4 @@
-FROM nikolaik/python-nodejs:python3.9-nodejs16
+FROM nikolaik/python-nodejs:python3.9-nodejs17
 
 RUN apt-get update \
 
