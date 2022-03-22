@@ -17,7 +17,9 @@ abhi = Client(
     
     )
 
-user = PyTgCalls(abhi)
+user = PyTgCalls(abhi,
+    cache_duration=100,
+    overload_quiet_mode=True,)
 
 
 with Client("Indian Music Bot", API_ID, API_HASH, bot_token=BOT_TOKEN) as app:
