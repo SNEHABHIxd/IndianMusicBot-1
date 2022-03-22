@@ -1,6 +1,6 @@
 pyrogram
 tgcrypto
-py-tgcalls
+py-tgcalls[pyrogram]
 pytube
 yt_dlp
 youtube_dl
