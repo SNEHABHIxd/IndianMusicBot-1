@@ -3,12 +3,19 @@ import asyncio
 import yt_dlp 
 
 
+
 async def bash(cmd):
     process = await asyncio.create_subprocess_shell(
         cmd,
         stdout=asyncio.subprocess.PIPE,
         stderr=asyncio.subprocess.PIPE,
     )
+    stdout, stderr = await process.communicate()
+    err = stderr.decode().strip()
+    out = stdout.decode().strip()
+    return out, err
+
+
 async def yt_video(link):
     proc = await asyncio.create_subprocess_exec(
         "yt-dlp",
@@ -34,9 +41,4 @@ async def yt_audio(link):
     )
     if stdout:
         return 1, stdout
-    return 0, stderr   stdout, stderr = await process.communicate()
-    err = stderr.decode().strip()
-    out = stdout.decode().strip()
-    return out, err
-
-
+    return 0, stderr
