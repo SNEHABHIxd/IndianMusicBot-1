@@ -9,7 +9,7 @@ async def bash(cmd):
         stdout=asyncio.subprocess.PIPE,
         stderr=asyncio.subprocess.PIPE,
     )
- async def yt_video(link):
+async def yt_video(link):
     proc = await asyncio.create_subprocess_exec(
         "yt-dlp",
         "--geo-bypass",
