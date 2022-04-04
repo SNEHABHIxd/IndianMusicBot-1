@@ -1,6 +1,6 @@
 pyrogram
 tgcrypto
-git+https://github.com/vexeraop/xdcalls
+py-tgcalls[pyrogram]
 pytube
 git+https://GitHub.com/vexeraop/download
 youtube_dl
